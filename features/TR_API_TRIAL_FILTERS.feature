@@ -39,6 +39,7 @@ Feature: Verify the filtering of responses against the Trial api
     And I add <filter>
     Then I get a status code of <Expected Code>
 
+
   Examples: Request Criterion
     | Type  | filter                                                                                                  | Expected Code |
     | trial |  ?filter[trial]=attributes.eligibility.gender:(Male Female)&attributes.eligibility.healthy_volunteers:No|      200      |
