@@ -1,0 +1,86 @@
+<testsuite errors="0" failures="0" name="TR_API_Basic_Calls.Verify the basic api call" skipped="0" tests="5" time="4.823795"><testcase classname="TR_API_Basic_Calls.Verify the basic api call" name="API basic call - Trial -- @1.1 Request Criterion" status="passed" time="1.433617"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_BASIC_TRIAL
+  Scenario Outline: API basic call - Trial -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 0.000s
+    Then I get a status code of 200 ... passed in 1.433s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+URL : https://api.staging.trialreach.com/trial
+
+]]>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls.Verify the basic api call" name="API basic call - Trial -- @1.2 Request Criterion" status="passed" time="1.84496"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_BASIC_TRIAL
+  Scenario Outline: API basic call - Trial -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of protocol ... passed in 0.000s
+    Then I get a status code of 200 ... passed in 1.845s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+URL : https://api.staging.trialreach.com/protocol
+
+]]>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls.Verify the basic api call" name="API basic call - Trial -- @1.3 Request Criterion" status="passed" time="0.552287"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_BASIC_TRIAL
+  Scenario Outline: API basic call - Trial -- @1.3 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of annotation ... passed in 0.000s
+    Then I get a status code of 200 ... passed in 0.552s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+URL : https://api.staging.trialreach.com/annotation
+
+]]>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls.Verify the basic api call" name="API basic call - Protocol" status="passed" time="0.475346"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_BASIC_PROTCOL
+  Scenario: API basic call - Protocol
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Protocol ... passed in 0.000s
+    Then I get a status code of 200 ... passed in 0.475s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+URL : https://api.staging.trialreach.com/protocol
+
+]]>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls.Verify the basic api call" name="API basic call - Annotation" status="passed" time="0.517585"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_BASIC_ANNOTATION
+  Scenario: API basic call - Annotation
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Annotation ... passed in 0.000s
+    Then I get a status code of 200 ... passed in 0.517s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+URL : https://api.staging.trialreach.com/annotation
+
+]]>
+</system-out></testcase></testsuite>
