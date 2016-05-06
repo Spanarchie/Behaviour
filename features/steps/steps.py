@@ -67,3 +67,9 @@ def step_impl(context):
 @when(u'I Include Protocols and trials')
 def step_impl(context):
     context.trgt = context.trgt + "?include=protocol,trial"
+
+
+@when(u'I add {filter}')
+def step_impl(context, filter):
+    context.trgt = context.trgt + filter
+

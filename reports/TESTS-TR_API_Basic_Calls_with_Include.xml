@@ -1,11 +1,11 @@
-<testsuite errors="0" failures="0" name="TR_API_Basic_Calls_with_Include.Verify the basic api call" skipped="0" tests="9" time="8.234394"><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Trial call - with BOTH  Protocols and Annotations" status="passed" time="1.276532"><system-out>
+<testsuite errors="0" failures="0" name="TR_API_Basic_Calls_with_Include.Verify the basic api call" skipped="0" tests="9" time="9.059269"><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Trial call - with BOTH  Protocols and Annotations" status="passed" time="1.460572"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: API basic Trial call - with BOTH  Protocols and Annotations
     Given I am on staging environment ... passed in 0.000s
     When I request to see all Trials ... passed in 0.000s
     And I Include protocols and annotations ... passed in 0.000s
-    Then I get a status code of 200 ... passed in 1.276s
+    Then I get a status code of 200 ... passed in 1.460s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -14,14 +14,14 @@ Captured stdout:
 URL : https://api.staging.trialreach.com/trial?include=protocol,annotation
 
 ]]>
-</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Trial call - with Protocols" status="passed" time="1.245621"><system-out>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Trial call - with Protocols" status="passed" time="1.328936"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: API basic Trial call - with Protocols
     Given I am on staging environment ... passed in 0.000s
     When I request to see all Trials ... passed in 0.000s
     And I Include protocols ... passed in 0.000s
-    Then I get a status code of 200 ... passed in 1.245s
+    Then I get a status code of 200 ... passed in 1.328s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -30,14 +30,14 @@ Captured stdout:
 URL : https://api.staging.trialreach.com/trial?include=protocol
 
 ]]>
-</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Trial call - with Annotations" status="passed" time="1.226412"><system-out>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Trial call - with Annotations" status="passed" time="1.33097"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: API basic Trial call - with Annotations
     Given I am on staging environment ... passed in 0.000s
     When I request to see all Trials ... passed in 0.000s
     And I Include annotations ... passed in 0.000s
-    Then I get a status code of 200 ... passed in 1.226s
+    Then I get a status code of 200 ... passed in 1.330s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -46,14 +46,14 @@ Captured stdout:
 URL : https://api.staging.trialreach.com/trial?include=annotation
 
 ]]>
-</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Protocol call -  with trials" status="passed" time="0.748509"><system-out>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Protocol call -  with trials" status="passed" time="0.749327"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: API basic Protocol call -  with trials
     Given I am on staging environment ... passed in 0.000s
     When I request to see all Protocol ... passed in 0.000s
     And I Include trials ... passed in 0.000s
-    Then I get a status code of 200 ... passed in 0.748s
+    Then I get a status code of 200 ... passed in 0.749s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -62,14 +62,14 @@ Captured stdout:
 URL : https://api.staging.trialreach.com/protocol?include=trial
 
 ]]>
-</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Annotation call - with Trials" status="passed" time="0.879392"><system-out>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Annotation call - with Trials" status="passed" time="1.006483"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: API basic Annotation call - with Trials
     Given I am on staging environment ... passed in 0.000s
     When I request to see all Annotation ... passed in 0.000s
     And I Include trials ... passed in 0.000s
-    Then I get a status code of 200 ... passed in 0.879s
+    Then I get a status code of 200 ... passed in 1.006s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -78,14 +78,14 @@ Captured stdout:
 URL : https://api.staging.trialreach.com/annotation?include=trial
 
 ]]>
-</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Protocol call - with Annotations And Trials(INVALID)" status="passed" time="0.633043"><system-out>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Protocol call - with Annotations And Trials(INVALID)" status="passed" time="0.561669"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: API basic Protocol call - with Annotations And Trials(INVALID)
     Given I am on staging environment ... passed in 0.000s
     When I request to see all Protocol ... passed in 0.000s
     And I Include annotations ... passed in 0.000s
-    Then I get a status code of 400 ... passed in 0.633s
+    Then I get a status code of 400 ... passed in 0.561s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -94,14 +94,14 @@ Captured stdout:
 URL : https://api.staging.trialreach.com/protocol?include=annotation
 
 ]]>
-</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Protocol call - with Annotations(INVALID)" status="passed" time="0.980203"><system-out>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Protocol call - with Annotations(INVALID)" status="passed" time="1.19198"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: API basic Protocol call - with Annotations(INVALID)
     Given I am on staging environment ... passed in 0.000s
     When I request to see all Protocol ... passed in 0.000s
     And I Include annotations ... passed in 0.000s
-    Then I get a status code of 400 ... passed in 0.980s
+    Then I get a status code of 400 ... passed in 1.191s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -110,14 +110,14 @@ Captured stdout:
 URL : https://api.staging.trialreach.com/protocol?include=annotation
 
 ]]>
-</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Annotation call - BOTH  Protocols and Trials(INVALID)" status="passed" time="0.676042"><system-out>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Annotation call - BOTH  Protocols and Trials(INVALID)" status="passed" time="0.715204"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: API basic Annotation call - BOTH  Protocols and Trials(INVALID)
     Given I am on staging environment ... passed in 0.000s
     When I request to see all Annotation ... passed in 0.000s
     And I Include protocols and trials ... passed in 0.000s
-    Then I get a status code of 400 ... passed in 0.676s
+    Then I get a status code of 400 ... passed in 0.715s
 
 @scenario.end
 --------------------------------------------------------------------------------
@@ -126,14 +126,14 @@ Captured stdout:
 URL : https://api.staging.trialreach.com/annotation?include=protocol,trial
 
 ]]>
-</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Annotation call - with Protocols(INVALID)" status="passed" time="0.56864"><system-out>
+</system-out></testcase><testcase classname="TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Annotation call - with Protocols(INVALID)" status="passed" time="0.714128"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario: API basic Annotation call - with Protocols(INVALID)
     Given I am on staging environment ... passed in 0.000s
     When I request to see all Annotation ... passed in 0.000s
     And I Include protocols ... passed in 0.000s
-    Then I get a status code of 400 ... passed in 0.568s
+    Then I get a status code of 400 ... passed in 0.714s
 
 @scenario.end
 --------------------------------------------------------------------------------
