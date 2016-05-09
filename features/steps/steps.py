@@ -3,14 +3,12 @@
 #
 import requests
 
-
 def rqstr(url):
     auth = ("qEZxd3bC707QtFLCrBLP6DhDvHVALcJP", "BtMPHHrOrAqFReGz")
     print ("URL : {}".format(url))
     r = requests.get(url, auth=auth)
     statusCode = r.status_code
     return statusCode
-
 
 
 @Given('I am on staging environment')
@@ -34,20 +32,6 @@ def step_impl3(context):
 def step_impl4(context):
     context.trgt = context.trgt + "annotation"
 
-@Then('I get a status code of 200')
-def step_impl5(context):
-    url = "https://"+context.trgt
-    context.actual = rqstr( url )
-    exp = 200
-    assert exp == context.actual
-
-@Then('I get a status code of 400')
-def step_impl5(context):
-    url = "https://"+context.trgt
-    context.actual = rqstr( url )
-    exp = 400
-    assert exp == context.actual
-
 @when(u'I Include Protocols and Annotations')
 def step_impl(context):
     context.trgt = context.trgt + "?include=protocol,annotation"
@@ -69,7 +53,30 @@ def step_impl(context):
     context.trgt = context.trgt + "?include=protocol,trial"
 
 
-@when(u'I add {filter}')
+####                    ####
+####    USING FILTERS   ####
+####                    ####
+
+@when(u'I filter by {filter}')
 def step_impl(context, filter):
     context.trgt = context.trgt + filter
 
+
+#          @THEN
+####                    ####
+####  Validate Results  ####
+####                    ####
+
+@Then('I get a status code of 200')
+def step_impl5(context):
+    url = "https://"+context.trgt
+    context.actual = rqstr( url )
+    exp = 200
+    assert exp == context.actual
+
+@Then('I get a status code of 400')
+def step_impl5(context):
+    url = "https://"+context.trgt
+    context.actual = rqstr( url )
+    exp = 400
+    assert exp == context.actual
