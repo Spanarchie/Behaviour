@@ -6,6 +6,7 @@ if [ ! -d "pyEnvJenkins" ]; then
         pip install -r requirements.txt
 fi
 . pyEnvJenkins/bin/activate
+pip install -r requirements.txt
 
 behave --junit
 
