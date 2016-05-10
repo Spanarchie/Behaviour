@@ -1,8 +1,8 @@
 #!/bin/bash
 
-. pyEnv2_7Jenkins/bin/activate
-pip install -r requirements.txt
+echo "Starting vEnv"
+source pyEnv2_7Jenkins/bin/activate
 
+echo "Starting the Behave tests"
 behave --junit
 
-deactivate
