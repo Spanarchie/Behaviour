@@ -40,22 +40,26 @@ Feature: Verify the basic api call
     When  I request to see all Protocol
     And I Include annotations
     Then I get a status code of 400
+    And I see the Error title is "Invalid parameter"
 
   Scenario: API basic Protocol call - with Annotations(INVALID)
     Given I am on staging environment
     When  I request to see all Protocol
     And I Include annotations
     Then I get a status code of 400
+    And I see the Error title is "Invalid parameter"
 
   Scenario: API basic Annotation call - BOTH  Protocols and Trials(INVALID)
     Given I am on staging environment
     When  I request to see all Annotation
     And I Include protocols and trials
     Then I get a status code of 400
+    And I see the Error title is "Invalid parameter"
 
   Scenario: API basic Annotation call - with Protocols(INVALID)
     Given I am on staging environment
     When  I request to see all Annotation
     And I Include protocols
     Then I get a status code of 400
+    And I see the Error title is "Invalid parameter"
 

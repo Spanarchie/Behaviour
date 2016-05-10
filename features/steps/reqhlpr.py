@@ -6,4 +6,5 @@ def rqstr(url):
     print ("URL : {}".format(url))
     r = requests.get(url, auth=auth)
     statusCode = r.status_code
-    return statusCode
+    jsonData = r.json()
+    return ([statusCode, jsonData])

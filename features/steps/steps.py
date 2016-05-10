@@ -2,13 +2,21 @@
 #
 #
 import requests
+import pytest
+
+type_ns_list = ["pfizer.irb_approved","pfizer.document","pfizer.logo","pfizer.brochure", "pfizer.image"]
+
 
 def rqstr(url):
     auth = ("qEZxd3bC707QtFLCrBLP6DhDvHVALcJP", "BtMPHHrOrAqFReGz")
-    print ("URL : {}".format(url))
     r = requests.get(url, auth=auth)
     statusCode = r.status_code
-    return statusCode
+    statusHeaders = r.headers
+    if statusCode == 200:
+        statusData = r.json()['data']
+    else:
+        statusData = r.json()['errors']
+    return [statusCode, statusData, statusHeaders]
 
 
 @Given('I am on staging environment')
@@ -61,6 +69,10 @@ def step_impl(context):
 def step_impl(context, filter):
     context.trgt = context.trgt + filter
 
+# To include protocol & annotations to trials and vice versa
+@when(u'I include the {filter}')
+def step_impl(context, filter):
+    context.trgt = context.trgt + "&include="+filter
 
 #          @THEN
 ####                    ####
@@ -72,11 +84,26 @@ def step_impl5(context):
     url = "https://"+context.trgt
     context.actual = rqstr( url )
     exp = 200
-    assert exp == context.actual
+    assert exp == context.actual[0]
+
 
 @Then('I get a status code of 400')
 def step_impl5(context):
     url = "https://"+context.trgt
     context.actual = rqstr( url )
     exp = 400
-    assert exp == context.actual
+    assert exp == context.actual[0]
+
+
+@Then ('the type_ns is in the type_ns_list')
+def step_CheckResultInList(context):
+    print(context.actual[1])
+    for item in context.actual[1]:
+        assert item['attributes']['type_ns'] in type_ns_list
+
+@Then('I see the Error title is {message}')
+@Then('I see the Error title is "{message}"')
+def step_VerifyErrorMessage(context, message):
+    print ("Message : {}".format(message))
+    print ("Actual : {}".format(context.actual[1][0]['title']))
+    assert message == context.actual[1][0]['title']
