@@ -89,13 +89,15 @@ def postReq(url, payload):
 
 
 
-def rqstr(url):
+def rqstr(context, url):
     auth = ("qEZxd3bC707QtFLCrBLP6DhDvHVALcJP", "BtMPHHrOrAqFReGz")
     r = requests.get(url, auth=auth)
     statusCode = r.status_code
     statusHeaders = r.headers
     if statusCode == 200:
         statusData = r.json()['data']
+        context.optCount = len(statusData)
+        print("statusData : {}".format(statusData))
     else:
         statusData = r.json()['errors']
     return [statusCode, statusData, statusHeaders]
@@ -200,7 +202,6 @@ def step_VerifyWebpage(context, webpage, auth):
     url = "https://"+context.trgt
     context.actual = rqstr( url )
 
-
 @When(u'I post request a "{payload}" Trial')
 def step_postReq(context, payload):
     uri = "https://api.staging.trialreach.com/match-rule/redirect"
@@ -209,10 +210,20 @@ def step_postReq(context, payload):
     context.actual = postReq( uri, payloadr)
 
 
+@when(u'I request a condishion ""')
+def step_concept_No_suggestion_value(context):
+    url = "https://api.build.trialreach.com/concept/suggestion?condition="
+    context.actual = rqstr(context, url )
 
+@when(u'I request a condishion "{term}"')
+def step_concept_suggestion(context, term):
+    url = "https://api.build.trialreach.com/concept/suggestion?condition="+term
+    context.actual = rqstr(context, url )
 
-
-
+@when(u'I request a condishion just the endpoint')
+def step_concept_No_suggestion(context):
+    url = "https://api.build.trialreach.com/concept/suggestion"
+    context.actual = rqstr(context, url )
 
 
 #          @THEN
@@ -260,3 +271,13 @@ def step_VerifyReDirect(context, message):
     print ("Message : {}".format(message))
     print ("Actual : {}".format(context.actual[3]))
     assert message == context.actual[3]
+
+
+@Then('I am returned {cnt} options')
+def step_VerifyOptionsReturned(context, cnt):
+    count = str(context.optCount)
+    print("Count : {}".format(count))
+    print("Cnt : {}".format(cnt))
+    assert cnt == count
+
+
