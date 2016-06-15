@@ -35,7 +35,7 @@ Feature: Verify the main web pages for Trialreach are behaving as expected
     Examples: Request Criterion
     | webpage                                                          | Expected Code | auth   |
     |  http://demo-demo01.trialreach.com/                              |      401      | empty  |
-    |  http://demo-demo01.trialreach.com/bridge                        |      401      | empty  |
+    |  http://demo-demo01.trialreach.com/bridge                        |      200      | empty  |
     |  https://api.demo.trialreach.com/trial                           |      200      | apigee |
 
 
@@ -56,10 +56,12 @@ Feature: Verify the main web pages for Trialreach are behaving as expected
     |  http://staging.trialreach.com/bridge                            |      200      |  tr    |
     |  https://api.staging.trialreach.com/trial                        |      200      | apigee |
     # Classic Pages
+    |  http://staging.trialreach.com/about/jobs.html?let_me_in         |      401      |  empty |
+    |  http://staging.trialreach.com/about/team.html?let_me_in         |      401      |  empty |
     |  http://staging.trialreach.com/about/jobs.html?let_me_in         |      200      |  tr    |
     |  http://staging.trialreach.com/about/team.html?let_me_in         |      200      |  tr    |
     |  http://staging.trialreach.com/find_global_trials.html?let_me_in |      200      |  tr    |
-    |  http://staging.trialreach.com/s/TM511?let_me_in                 |      200      |  tr    |
+#    |  http://staging.trialreach.com/s/TM511?let_me_in                 |      200      |  tr    |  Very slow to load
 
 
   @PRODUCTION_LANDING_PAGES  @PRODUCTION_WEB_SANITY

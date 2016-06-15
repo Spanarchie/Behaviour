@@ -88,18 +88,20 @@ def postReq(url, payload):
     return [statusCode, statusData, statusHeaders, route]
 
 
-
 def rqstr(context, url):
     auth = ("qEZxd3bC707QtFLCrBLP6DhDvHVALcJP", "BtMPHHrOrAqFReGz")
     r = requests.get(url, auth=auth)
     statusCode = r.status_code
     statusHeaders = r.headers
-    if statusCode == 200:
-        statusData = r.json()['data']
-        context.optCount = len(statusData)
-        print("statusData : {}".format(statusData))
+    if (context.web == 0):
+        if statusCode == 200:
+            statusData = r.json()['data']
+            context.optCount = len(statusData)
+            print("statusData : {}".format(statusData))
+        else:
+            statusData = r.json()['errors']
     else:
-        statusData = r.json()['errors']
+        statusData = ""
     return [statusCode, statusData, statusHeaders]
 
 def QuickCheck(context, url):
@@ -114,67 +116,69 @@ def QuickCheck(context, url):
 
 @Given('I am on staging environment')
 def step_impl1(context):
+    context.web = 0
     context.trgt = "api.staging.trialreach.com/"
 
 
 @Given(u'I have promoted code')
 def step_impl1(context):
+    context.web = 1
     context.trgt = ""
 
 @When('I request to see all Trials')
 def step_impl2(context):
     context.trgt = context.trgt+"trial"
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 @When('I request to see all of {type}')
 def step_impl3(context, type):
     context.trgt = context.trgt + type
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 @When('I request to see all Protocol')
 def step_impl3(context):
     context.trgt = context.trgt + "protocol"
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 
 @When('I request to see all Annotation')
 def step_impl4(context):
     context.trgt = context.trgt + "annotation"
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 @when(u'I Include Protocols and Annotations')
 def step_impl(context):
     context.trgt = context.trgt + "?include=protocol,annotation"
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 @when(u'I Include protocols')
 def step_impl(context):
     context.trgt = context.trgt + "?include=protocol"
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 @when(u'I Include annotations')
 def step_impl(context):
     context.trgt = context.trgt + "?include=annotation"
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 @when(u'I Include trials')
 def step_impl(context):
     context.trgt = context.trgt + "?include=trial"
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 @when(u'I Include Protocols and trials')
 def step_impl(context):
     context.trgt = context.trgt + "?include=protocol,trial"
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 
 ####                    ####
@@ -185,22 +189,22 @@ def step_impl(context):
 def step_impl(context, filter):
     context.trgt = context.trgt + filter
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 # To include protocol & annotations to trials and vice versa
 @when(u'I include the {filter}')
 def step_impl(context, filter):
     context.trgt = context.trgt + "&include="+filter
     url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    context.actual = rqstr(context, url )
 
 
 @When(u'I request to see {webpage} with {auth}')
 def step_VerifyWebpage(context, webpage, auth):
     context.trgt = webpage
     context.auth = "auth_"+auth
-    url = "https://"+context.trgt
-    context.actual = rqstr( url )
+    url = context.trgt
+    context.actual = rqstr(context, url )
 
 @When(u'I post request a "{payload}" Trial')
 def step_postReq(context, payload):
@@ -261,7 +265,8 @@ def step_VerifyErrorMessage(context, message):
 def step_AuthStatusCheck(context, exp):
     url = context.trgt
     context.actual = QuickCheck(context, url)
-    print("Expected : {} = Actual : {}".format(type(exp), type(context.actual)))
+    print("Expected : {} = Actual : {}".format(exp, context.actual))
+    context.web = 0
     assert exp == str(context.actual)
 
 
