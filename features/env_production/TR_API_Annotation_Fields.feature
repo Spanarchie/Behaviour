@@ -28,7 +28,6 @@ Feature: Verify the filtering of responses against the annotation api
       | annotation | ?field[annotation]=type                |      200      |
       | annotation | ?field[annotation]=attributes.type_ns  |      200      |
 
-  @CMH
   Scenario Outline: API annotations with trials included - Single field - String
     Given I am on production environment
     When  I request to see all of <Type>

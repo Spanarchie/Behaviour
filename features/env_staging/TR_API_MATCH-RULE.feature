@@ -1,5 +1,5 @@
 # Created by colinmoore-hill at 06/06/2016
-@API_BASIC_STAGING @MATCH-RULE
+ @MATCH-RULE @MATCH-RULE_STAGING
 Feature: Verify the MATCH_RULE - US & Diabetes
     To verify the the MATCH_RULE directs all US & Diabetes queries to 'MATCH'
     and the rest of the queries to 'CLASSIC'.
