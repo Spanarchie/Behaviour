@@ -1,4 +1,4 @@
-@API_BASIC
+@API_BASIC_PROD
 Feature: Verify the filtering of responses against the Trial api
     To verify the filtering of responses is correct against the Trials API.
 
@@ -6,9 +6,9 @@ Feature: Verify the filtering of responses against the Trial api
     ?filter[trial]=attributes.eligibility.gender:Male%20AND%20attributes.eligibility.healthy_volunteers:No
     ?filter[trial]=attributes.eligibility.gender:Male%20AND%20attributes.location_countries.country:"United States"
 
-  @API_TRIAL_FILTER
+  @API_BASIC_PRODUCTION @API_TRIAL_FILTER_PROD
   Scenario Outline: API Trial call - AND
-    Given I am on staging environment
+    Given I am on production environment
     When  I request to see all of <Type>
     And I filter by <Filter>
     Then I get a status code of <Expected Code>
@@ -20,9 +20,9 @@ Feature: Verify the filtering of responses against the Trial api
     | trial |  ?filter[trial]=attributes.eligibility.gender:Male%20AND%20attributes.location_countries.country:"United States"                            |      200      |
     | trial |  ?filter[trial]=attributes.location_countries.country:"United States"%20AND%20attributes.location_countries.country:"Bosnia and Herzegovina"|      200      |
 
-  @API_TRIAL_FILTER
+  @API_TRIAL_FILTER_PROD
   Scenario Outline: API Trial call - OR
-    Given I am on staging environment
+    Given I am on production environment
     When  I request to see all of <Type>
     And I filter by <Filter>
     Then I get a status code of <Expected Code>
@@ -33,9 +33,9 @@ Feature: Verify the filtering of responses against the Trial api
       | trial |  ?filter[trial]=attributes.location_countries.country:"United States" OR attributes.location_countries.country:"United kingdom"|      200      |
 
 
-  @API_TRIAL_FILTER
+  @API_TRIAL_FILTER_PROD
   Scenario Outline: API Trial call - OR using ()
-    Given I am on staging environment
+    Given I am on production environment
     When  I request to see all of <Type>
     And I filter by <Filter>
     Then I get a status code of <Expected Code>
@@ -47,9 +47,9 @@ Feature: Verify the filtering of responses against the Trial api
     | trial |  ?filter[trial]=attributes.location_countries.country:("United States"+"Bosnia and Herzegovina")|      200      |
 
 
-  @API_TRIAL_FILTER
+  @API_TRIAL_FILTER_PROD
   Scenario Outline: API Trial call - OR with &(as AND)
-    Given I am on staging environment
+    Given I am on production environment
     When  I request to see all of <Type>
     And I filter by <Filter>
     Then I get a status code of <Expected Code>

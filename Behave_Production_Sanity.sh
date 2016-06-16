@@ -9,6 +9,6 @@ fi
 . pyEnvJenkins/bin/activate
 pip install -r requirements.txt
 
-behave --junit --tags=@PRODUCTION
+behave --junit --tags=@PRODUCTION,@API_BASIC_PRODUCTION
 
 deactivate

@@ -1,4 +1,4 @@
-@API_BASIC @API_TRIAL_SHOW_FIELDS
+@API_BASIC_STAGING @API_TRIAL_SHOW_FIELDS
 Feature: Verify the filtering of responses against the Trial api
     To verify the filtering of responses is correct against the Trials API.
 

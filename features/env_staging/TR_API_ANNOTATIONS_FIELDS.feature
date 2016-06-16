@@ -1,4 +1,4 @@
-@API_ANNOTATIONS @API_ANNOTATIONS_FIELDS
+@API_BASIC_STAGING @API_ANNOTATIONS @API_ANNOTATIONS_FIELDS
 
 Feature: Verify the filtering of responses against the annotation api
     To verify the filtering of responses is correct against the annotation API.

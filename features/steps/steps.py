@@ -25,7 +25,6 @@ json_Payloads = {
         "gender": "Both",
         "containing_term": "Type 2 Diabetes"
     },
-
     "non-US Diabetes": {
         "age": 55,
         "country_code": "IE",
@@ -119,6 +118,11 @@ def step_impl1(context):
     context.web = 0
     context.trgt = "api.staging.trialreach.com/"
 
+
+@Given('I am on production environment')
+def step_impl1a(context):
+    context.web = 0
+    context.trgt = "api.trialreach.com/"
 
 @Given(u'I have promoted code')
 def step_impl1(context):

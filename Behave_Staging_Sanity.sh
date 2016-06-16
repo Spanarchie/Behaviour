@@ -9,6 +9,6 @@ fi
 . pyEnvJenkins/bin/activate
 pip install -r requirements.txt
 
-behave --junit  --tags @MATCH-RULE
+behave --junit  --tags @API_BASIC_STAGING
 
 deactivate

@@ -1,4 +1,4 @@
-@API_BASIC
+@API_BASIC_PRODUCTION
 Feature: Verify the filtering of responses against the Trial api
     To verify the filtering of responses is correct against the Trials API.
 
@@ -8,7 +8,7 @@ Feature: Verify the filtering of responses against the Trial api
 
   @API_TRIAL_FILTER
   Scenario Outline: API Trial call - AND
-    Given I am on staging environment
+    Given I am on production environment
     When  I request to see all of <Type>
     And I filter by <Filter>
     Then I get a status code of <Expected Code>
@@ -22,7 +22,7 @@ Feature: Verify the filtering of responses against the Trial api
 
   @API_TRIAL_FILTER
   Scenario Outline: API Trial call - OR
-    Given I am on staging environment
+    Given I am on production environment
     When  I request to see all of <Type>
     And I filter by <Filter>
     Then I get a status code of <Expected Code>
@@ -35,7 +35,7 @@ Feature: Verify the filtering of responses against the Trial api
 
   @API_TRIAL_FILTER
   Scenario Outline: API Trial call - OR using ()
-    Given I am on staging environment
+    Given I am on production environment
     When  I request to see all of <Type>
     And I filter by <Filter>
     Then I get a status code of <Expected Code>
@@ -49,7 +49,7 @@ Feature: Verify the filtering of responses against the Trial api
 
   @API_TRIAL_FILTER
   Scenario Outline: API Trial call - OR with &(as AND)
-    Given I am on staging environment
+    Given I am on production environment
     When  I request to see all of <Type>
     And I filter by <Filter>
     Then I get a status code of <Expected Code>

@@ -1,6 +1,6 @@
 # Created by colinmoore-hill at 06/05/2016
 
-@API_BASIC
+@API_BASIC_STAGING
 Feature: Verify the basic api call
     To verify the basic api to collect all Trials, Protocols and Annotations
 
