@@ -25,17 +25,22 @@ elif targetENV == "rnd" :
     targetURL = "api.build.trialreach.com"
     buildHeader = {'ENV-NODE': 'rnd'}
 
+elif targetENV == "production" :
+    targetURL = "api.trialreach.com"
+    buildHeader = {'ENV-NODE': ''}
+
 else:
     targetURL = "api.build.trialreach.com"
     buildHeader = {'ENV-NODE': ''}
+    targetENV == "build"
 
 
 # -- LOGGING -- #
-logger = logging.getLogger('API Load Test '+targetENV)
+logger = logging.getLogger(targetENV+' API Load Test')
 logger.setLevel(logging.DEBUG)
 # create file handler which logs even debug messages
 timestr = time.strftime("%Y%m%d-%H%M%S")
-filename = "logs/{}API_Test-{}-{}.log".format("CMH_LOG-", buildHeader["ENV-NODE"],timestr)
+filename = "logs/{}/{}API_Test-{}-{}.log".format(targetENV,"LOG-", buildHeader["ENV-NODE"],timestr)
 print("Filename : {}".format(filename))
 fh = logging.FileHandler(filename)
 fh.setLevel(logging.DEBUG)
@@ -149,11 +154,11 @@ def generatePerfChart(data, title, date, root="svg/"):
     bar_chart.x_labels = map(str, range(0, maxLen))
     if title =="Combined":
         if root == "svg/":
-            bar_chart.render_to_file('svg/{}-{}{}_chart2.svg'.format(date, title, targetENV))
+            bar_chart.render_to_file('svg/{}-{}_chart2.svg'.format(date, title))
         else:
-            bar_chart.render_to_file('{}{}{}.svg'.format(root, title, targetENV))
+            bar_chart.render_to_file('{}{}.svg'.format(root, title))
     else:
-            bar_chart.render_to_file('{}{}-{}{}_chart2.svg'.format(root, date, title, targetENV))
+            bar_chart.render_to_file('{}{}-{}_chart2.svg'.format(root, date, title ))
 
 
 def generateActualPerfChart(data, title, date, root="svg/"):
