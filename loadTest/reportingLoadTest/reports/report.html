@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 SVG demo</title>
+    <style>
+    img{
+      max-width: 50%;
+      float: left;
+    }
+    object{
+      max-width: 50%;
+      float: left;
+    }
+    .cf:before,
+.cf:after {
+   content: " "; /* 1 */
+   display: table; /* 2 */
+}
+
+.cf:after {
+   clear: both;
+}
+
+/**
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+.cf {
+   *zoom: 1;
+}
+    </style>
+  </head>
+
+ 
+  <body>
+    <h1>Trialreach API Results:</h1>
+
+      <div class="cf">
+        <object type="image/svg+xml" data="./svgImg/latest/Actual.svg">
+              Your browser does not support SVG
+        </object>
+        <object type="image/svg+xml" data="./svgImg/latest/Combined.svg">
+              Your browser does not support SVG
+        </object>
+        <object type="image/svg+xml" data="./svgImg/previous/Actual.svg">
+              Your browser does not support SVG
+        </object>
+        <object type="image/svg+xml" data="./svgImg/previous/Combined.svg">
+              Your browser does not support SVG
+        </object>
+      </div>
+  </body>
+</html>

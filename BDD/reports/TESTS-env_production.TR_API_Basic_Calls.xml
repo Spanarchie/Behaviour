@@ -1,0 +1,40 @@
+<testsuite errors="0" failures="0" name="env_production.TR_API_Basic_Calls.Verify the basic api call" skipped="3" tests="3" time="0.0"><testcase classname="env_production.TR_API_Basic_Calls.Verify the basic api call" name="API basic call - Trial" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_BASIC_TRIAL_PROD
+  Scenario: API basic call - Trial
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all Trials ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Basic_Calls.Verify the basic api call" name="API basic call - Protocol" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_BASIC_PROTCOL_PROD
+  Scenario: API basic call - Protocol
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all Protocol ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Basic_Calls.Verify the basic api call" name="API basic call - Annotation" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_BASIC_ANNOTATION_PROD
+  Scenario: API basic call - Annotation
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all Annotation ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

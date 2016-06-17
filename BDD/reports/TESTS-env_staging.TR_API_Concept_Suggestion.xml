@@ -1,0 +1,65 @@
+<testsuite errors="0" failures="0" name="env_staging.TR_API_Concept_Suggestion.Verify the MATCH_RULE - US &amp; Diabetes" skipped="0" tests="4" time="2.3314"><testcase classname="env_staging.TR_API_Concept_Suggestion.Verify the MATCH_RULE - US &amp; Diabetes" name="API CONCEPT-SUGGESTION call -" status="passed" time="0.627921"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_CONCEPT-SUGGESTION_basic
+  Scenario: API CONCEPT-SUGGESTION call -
+    Given I am on staging environment ... passed in 0.000s
+    When I request a condishion "imperforate" ... passed in 0.627s
+    Then I get a status code of 200 ... passed in 0.000s
+    And I am returned 4 options ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Count : 4
+Cnt : 4
+
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Concept_Suggestion.Verify the MATCH_RULE - US &amp; Diabetes" name="API CONCEPT-SUGGESTION call - Max 5 returned for common term (i.e. cancer)" status="passed" time="0.604293"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_CONCEPT-SUGGESTION_5_Max
+  Scenario: API CONCEPT-SUGGESTION call - Max 5 returned for common term (i.e. cancer)
+    Given I am on staging environment ... passed in 0.000s
+    When I request a condishion "cancer" ... passed in 0.604s
+    Then I get a status code of 200 ... passed in 0.000s
+    And I am returned 5 options ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Count : 5
+Cnt : 5
+
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Concept_Suggestion.Verify the MATCH_RULE - US &amp; Diabetes" name="API CONCEPT-SUGGESTION call -Error - no condishion value supplied" status="passed" time="0.552705"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_CONCEPT-SUGGESTION_ERR-No_condishion_value
+  Scenario: API CONCEPT-SUGGESTION call -Error - no condishion value supplied
+    Given I am on staging environment ... passed in 0.000s
+    When I request a condishion "" ... passed in 0.552s
+    Then I get a status code of 400 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Concept_Suggestion.Verify the MATCH_RULE - US &amp; Diabetes" name="API CONCEPT-SUGGESTION call -Error - no condishion added" status="passed" time="0.546481"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_CONCEPT-SUGGESTION_ERR-No_condishion_added
+  Scenario: API CONCEPT-SUGGESTION call -Error - no condishion added
+    Given I am on staging environment ... passed in 0.000s
+    When I request a condishion just the endpoint ... passed in 0.546s
+    Then I get a status code of 400 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

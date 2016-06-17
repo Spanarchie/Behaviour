@@ -1,0 +1,155 @@
+<testsuite errors="0" failures="0" name="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" skipped="0" tests="11" time="34.045044"><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - AND -- @1.1 Request Criterion" status="passed" time="2.04164"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - AND -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 0.989s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:Male%20AND%20attributes.eligibility.healthy_volunteers:No ... passed in 1.052s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - AND -- @1.2 Request Criterion" status="passed" time="2.113487"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - AND -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 0.986s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:Female%20AND%20attributes.eligibility.healthy_volunteers:No ... passed in 1.127s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - AND -- @1.3 Request Criterion" status="passed" time="3.419948"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - AND -- @1.3 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 2.046s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:Male%20AND%20attributes.location_countries.country:"United States" ... passed in 1.374s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - AND -- @1.4 Request Criterion" status="passed" time="4.111316"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - AND -- @1.4 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 1.112s
+    And I filter by ?filter[trial]=attributes.location_countries.country:"United States"%20AND%20attributes.location_countries.country:"Bosnia and Herzegovina" ... passed in 2.999s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR -- @1.1 Request Criterion" status="passed" time="2.331813"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - OR -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 1.289s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:Male OR attributes.eligibility.healthy_volunteers:No ... passed in 1.043s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR -- @1.2 Request Criterion" status="passed" time="3.549015"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - OR -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 2.194s
+    And I filter by ?filter[trial]=attributes.location_countries.country:"United States" OR attributes.location_countries.country:"United kingdom" ... passed in 1.355s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR using () -- @1.1 Request Criterion" status="passed" time="3.120169"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - OR using () -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 2.385s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:(Male Female) ... passed in 0.735s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR using () -- @1.2 Request Criterion" status="passed" time="3.689276"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - OR using () -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 1.273s
+    And I filter by ?filter[trial]=attributes.location_countries.country:("United States"+"United kingdom") ... passed in 2.416s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR using () -- @1.3 Request Criterion" status="passed" time="3.949504"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - OR using () -- @1.3 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 2.578s
+    And I filter by ?filter[trial]=attributes.location_countries.country:("United States"+"Bosnia and Herzegovina") ... passed in 1.371s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR with &amp;(as AND) -- @1.1 Request Criterion" status="passed" time="2.380949"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - OR with &(as AND) -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 1.641s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:(Male Female)&attributes.eligibility.healthy_volunteers:No ... passed in 0.739s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR with &amp;(as AND) -- @1.2 Request Criterion" status="passed" time="3.337927"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER
+  Scenario Outline: API Trial call - OR with &(as AND) -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 1.517s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:(Male Female)&attributes.location_countries.country:("United States"+"United kingdom") ... passed in 1.820s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

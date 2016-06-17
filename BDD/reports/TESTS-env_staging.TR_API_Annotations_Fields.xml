@@ -1,0 +1,99 @@
+<testsuite errors="0" failures="0" name="env_staging.TR_API_Annotations_Fields.Verify the filtering of responses against the annotation api" skipped="0" tests="6" time="8.789627"><testcase classname="env_staging.TR_API_Annotations_Fields.Verify the filtering of responses against the annotation api" name="API Single field - String -- @1.1 Request Criterion" status="passed" time="0.966288"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: API Single field - String -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of annotation ... passed in 0.482s
+    And I filter by ?field[annotation]=type ... passed in 0.484s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Annotations_Fields.Verify the filtering of responses against the annotation api" name="API Single field - String -- @1.2 Request Criterion" status="passed" time="0.938588"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: API Single field - String -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of annotation ... passed in 0.467s
+    And I filter by ?field[annotation]=attributes.type_ns ... passed in 0.471s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Annotations_Fields.Verify the filtering of responses against the annotation api" name="API annotations with trials included - Single field - String -- @1.1 Request Criterion" status="passed" time="1.741911"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: API annotations with trials included - Single field - String -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of annotation ... passed in 0.478s
+    And I filter by ?field[annotation]=type ... passed in 0.486s
+    And I include the trial ... passed in 0.778s
+    Then I get a status code of 200 ... passed in 0.000s
+    And the type_ns is in the type_ns_list ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+[{'relationships': {'version_history': {'data': {'id': '2b4ad2e2c5ead0cf05735484e6a329df', 'type': 'version_history'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/2b4ad2e2c5ead0cf05735484e6a329df/relationships/version_history'}}, 'annotates': {'data': {'id': '55ae267ee4b0d48826de61ef', 'type': 'trial'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/2b4ad2e2c5ead0cf05735484e6a329df/relationships/annotates'}}}, 'id': '2b4ad2e2c5ead0cf05735484e6a329df', 'attributes': {'attachment': {'title': 'sova_passion.pdf', 'href': 'https://s3.amazonaws.com/annotation-resource-attachments-staging/pfizer/55ae267ee4b0d48826de61ef/document_sova_passion.pdf', 'type': 'application/pdf'}, 'type_ns': 'pfizer.document', 'lastchanged_date': {'value': '2016-06-13T09:00:25.562965+00:00'}}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/2b4ad2e2c5ead0cf05735484e6a329df'}, 'type': 'annotation'}, {'relationships': {'version_history': {'data': {'id': '5722351ff75f4aebd02471ceed924479', 'type': 'version_history'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/5722351ff75f4aebd02471ceed924479/relationships/version_history'}}, 'annotates': {'data': {'id': '55ae267ee4b0d48826de61ef', 'type': 'trial'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/5722351ff75f4aebd02471ceed924479/relationships/annotates'}}}, 'id': '5722351ff75f4aebd02471ceed924479', 'attributes': {'attachment': {'title': 'crying-cat.jpg', 'href': 'https://s3.amazonaws.com/annotation-resource-attachments-staging/pfizer/55ae267ee4b0d48826de61ef/logo_crying-cat.jpg', 'type': 'image/jpeg'}, 'type_ns': 'pfizer.logo', 'lastchanged_date': {'value': '2016-06-13T09:00:25.544734+00:00'}}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/5722351ff75f4aebd02471ceed924479'}, 'type': 'annotation'}, {'relationships': {'version_history': {'data': {'id': 'c781959887e1806889cc095f97458ca6', 'type': 'version_history'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/c781959887e1806889cc095f97458ca6/relationships/version_history'}}, 'annotates': {'data': {'id': '55ae267ee4b0d48826de61ef', 'type': 'trial'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/c781959887e1806889cc095f97458ca6/relationships/annotates'}}}, 'id': 'c781959887e1806889cc095f97458ca6', 'attributes': {'type_ns': 'pfizer.irb_approved', 'lastchanged_date': {'value': '2016-06-13T09:00:25.538865+00:00'}}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/c781959887e1806889cc095f97458ca6'}, 'type': 'annotation'}]
+
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Annotations_Fields.Verify the filtering of responses against the annotation api" name="API annotations with trials included - Single field - String -- @1.2 Request Criterion" status="passed" time="1.753431"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: API annotations with trials included - Single field - String -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of annotation ... passed in 0.481s
+    And I filter by ?field[annotation]=attributes.type_ns ... passed in 0.493s
+    And I include the trial ... passed in 0.779s
+    Then I get a status code of 200 ... passed in 0.000s
+    And the type_ns is in the type_ns_list ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+[{'relationships': {'version_history': {'data': {'id': '2b4ad2e2c5ead0cf05735484e6a329df', 'type': 'version_history'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/2b4ad2e2c5ead0cf05735484e6a329df/relationships/version_history'}}, 'annotates': {'data': {'id': '55ae267ee4b0d48826de61ef', 'type': 'trial'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/2b4ad2e2c5ead0cf05735484e6a329df/relationships/annotates'}}}, 'id': '2b4ad2e2c5ead0cf05735484e6a329df', 'attributes': {'attachment': {'title': 'sova_passion.pdf', 'href': 'https://s3.amazonaws.com/annotation-resource-attachments-staging/pfizer/55ae267ee4b0d48826de61ef/document_sova_passion.pdf', 'type': 'application/pdf'}, 'type_ns': 'pfizer.document', 'lastchanged_date': {'value': '2016-06-13T09:00:25.562965+00:00'}}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/2b4ad2e2c5ead0cf05735484e6a329df'}, 'type': 'annotation'}, {'relationships': {'version_history': {'data': {'id': '5722351ff75f4aebd02471ceed924479', 'type': 'version_history'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/5722351ff75f4aebd02471ceed924479/relationships/version_history'}}, 'annotates': {'data': {'id': '55ae267ee4b0d48826de61ef', 'type': 'trial'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/5722351ff75f4aebd02471ceed924479/relationships/annotates'}}}, 'id': '5722351ff75f4aebd02471ceed924479', 'attributes': {'attachment': {'title': 'crying-cat.jpg', 'href': 'https://s3.amazonaws.com/annotation-resource-attachments-staging/pfizer/55ae267ee4b0d48826de61ef/logo_crying-cat.jpg', 'type': 'image/jpeg'}, 'type_ns': 'pfizer.logo', 'lastchanged_date': {'value': '2016-06-13T09:00:25.544734+00:00'}}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/5722351ff75f4aebd02471ceed924479'}, 'type': 'annotation'}, {'relationships': {'version_history': {'data': {'id': 'c781959887e1806889cc095f97458ca6', 'type': 'version_history'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/c781959887e1806889cc095f97458ca6/relationships/version_history'}}, 'annotates': {'data': {'id': '55ae267ee4b0d48826de61ef', 'type': 'trial'}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/c781959887e1806889cc095f97458ca6/relationships/annotates'}}}, 'id': 'c781959887e1806889cc095f97458ca6', 'attributes': {'type_ns': 'pfizer.irb_approved', 'lastchanged_date': {'value': '2016-06-13T09:00:25.538865+00:00'}}, 'links': {'self': 'https://api.staging.trialreach.com/annotation/c781959887e1806889cc095f97458ca6'}, 'type': 'annotation'}]
+
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Annotations_Fields.Verify the filtering of responses against the annotation api" name="API annotations with trials included - Single field - String invalid include -- @1.1 Request Criterion" status="passed" time="1.914996"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: API annotations with trials included - Single field - String invalid include -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of annotation ... passed in 0.475s
+    And I filter by ?field[annotation]=type ... passed in 0.479s
+    And I include the protocol ... passed in 0.961s
+    Then I get a status code of 400 ... passed in 0.000s
+    And I see the Error title is Invalid parameter ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Message : Invalid parameter
+Actual : Invalid parameter
+
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Annotations_Fields.Verify the filtering of responses against the annotation api" name="API annotations with trials included - Single field - String invalid include -- @1.2 Request Criterion" status="passed" time="1.474414"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: API annotations with trials included - Single field - String invalid include -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of annotation ... passed in 0.466s
+    And I filter by ?field[annotation]=attributes.type_ns ... passed in 0.474s
+    And I include the protocol ... passed in 0.533s
+    Then I get a status code of 400 ... passed in 0.000s
+    And I see the Error title is Invalid parameter ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Message : Invalid parameter
+Actual : Invalid parameter
+
+]]>
+</system-out></testcase></testsuite>

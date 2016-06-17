@@ -1,0 +1,57 @@
+<testsuite errors="0" failures="0" name="env_staging.TR_API_Trial_Fields.Verify the filtering of responses against the Trial api" skipped="0" tests="4" time="11.496424"><testcase classname="env_staging.TR_API_Trial_Fields.Verify the filtering of responses against the Trial api" name="API List Fields - Country -- @1.1 Request Criterion" status="passed" time="2.146305"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_SHOW_FIELDS
+  Scenario Outline: API List Fields - Country -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 0.991s
+    And I filter by ?field[trial]=attributes.location_countries.country ... passed in 1.155s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Fields.Verify the filtering of responses against the Trial api" name="API List Fields - Country -- @1.2 Request Criterion" status="passed" time="2.34988"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_SHOW_FIELDS
+  Scenario Outline: API List Fields - Country -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 1.369s
+    And I filter by ?field[trial]=attributes.keywords ... passed in 0.981s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Fields.Verify the filtering of responses against the Trial api" name="API Single field - String -- @1.1 Request Criterion" status="passed" time="3.684576"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_SHOW_FIELDS
+  Scenario Outline: API Single field - String -- @1.1 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 2.250s
+    And I filter by ?field[trial]=attributes.location_countries.country ... passed in 1.434s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Trial_Fields.Verify the filtering of responses against the Trial api" name="API Single field - String -- @1.2 Request Criterion" status="passed" time="3.315662"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_SHOW_FIELDS
+  Scenario Outline: API Single field - String -- @1.2 Request Criterion
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all of trial ... passed in 0.986s
+    And I filter by ?field[trial]=attributes.keywords ... passed in 2.329s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

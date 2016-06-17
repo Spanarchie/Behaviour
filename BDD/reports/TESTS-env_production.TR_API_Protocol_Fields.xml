@@ -1,0 +1,29 @@
+<testsuite errors="0" failures="0" name="env_production.TR_API_Protocol_Fields.Verify the filtering of responses against the Protocol api" skipped="2" tests="2" time="0.0"><testcase classname="env_production.TR_API_Protocol_Fields.Verify the filtering of responses against the Protocol api" name="API-protocol Single field - String -- @1.1 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_SHOW_FIELDS_PROD
+  Scenario Outline: API-protocol Single field - String -- @1.1 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of protocol ... skipped in 0.000s
+    And I filter by ?field[protocol]=type ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Fields.Verify the filtering of responses against the Protocol api" name="API-protocol Single field - String -- @1.2 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_SHOW_FIELDS_PROD
+  Scenario Outline: API-protocol Single field - String -- @1.2 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of protocol ... skipped in 0.000s
+    And I filter by ?field[protocol]=attributes.eligibility.who ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

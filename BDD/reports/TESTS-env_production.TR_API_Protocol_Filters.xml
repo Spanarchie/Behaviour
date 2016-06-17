@@ -1,0 +1,155 @@
+<testsuite errors="0" failures="0" name="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" skipped="11" tests="11" time="0.0"><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - AND -- @1.1 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - AND -- @1.1 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:Male%20AND%20attributes.eligibility.healthy_volunteers:No ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - AND -- @1.2 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - AND -- @1.2 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:Female%20AND%20attributes.eligibility.healthy_volunteers:No ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - AND -- @1.3 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - AND -- @1.3 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:Male%20AND%20attributes.location_countries.country:"United States" ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - AND -- @1.4 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - AND -- @1.4 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.location_countries.country:"United States"%20AND%20attributes.location_countries.country:"Bosnia and Herzegovina" ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR -- @1.1 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - OR -- @1.1 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:Male OR attributes.eligibility.healthy_volunteers:No ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR -- @1.2 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - OR -- @1.2 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.location_countries.country:"United States" OR attributes.location_countries.country:"United kingdom" ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR using () -- @1.1 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - OR using () -- @1.1 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:(Male Female) ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR using () -- @1.2 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - OR using () -- @1.2 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.location_countries.country:("United States"+"United kingdom") ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR using () -- @1.3 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - OR using () -- @1.3 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.location_countries.country:("United States"+"Bosnia and Herzegovina") ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR with &amp;(as AND) -- @1.1 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - OR with &(as AND) -- @1.1 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:(Male Female)&attributes.eligibility.healthy_volunteers:No ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_production.TR_API_Protocol_Filters.Verify the filtering of responses against the Trial api" name="API Trial call - OR with &amp;(as AND) -- @1.2 Request Criterion" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @API_TRIAL_FILTER_PROD
+  Scenario Outline: API Trial call - OR with &(as AND) -- @1.2 Request Criterion
+    Given I am on production environment ... skipped in 0.000s
+    When I request to see all of trial ... skipped in 0.000s
+    And I filter by ?filter[trial]=attributes.eligibility.gender:(Male Female)&attributes.location_countries.country:("United States"+"United kingdom") ... skipped in 0.000s
+    Then I get a status code of 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

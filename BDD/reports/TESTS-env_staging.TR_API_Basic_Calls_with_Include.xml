@@ -1,0 +1,133 @@
+<testsuite errors="0" failures="0" name="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" skipped="0" tests="9" time="18.764671"><testcase classname="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Trial call - with BOTH  Protocols and Annotations" status="passed" time="2.991366"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: API basic Trial call - with BOTH  Protocols and Annotations
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Trials ... passed in 0.994s
+    And I Include protocols and annotations ... passed in 1.997s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Trial call - with Protocols" status="passed" time="2.414083"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: API basic Trial call - with Protocols
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Trials ... passed in 1.260s
+    And I Include protocols ... passed in 1.154s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Trial call - with Annotations" status="passed" time="4.258277"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: API basic Trial call - with Annotations
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Trials ... passed in 1.574s
+    And I Include annotations ... passed in 2.684s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Protocol call -  with trials" status="passed" time="3.23644"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: API basic Protocol call -  with trials
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Protocol ... passed in 0.478s
+    And I Include trials ... passed in 2.758s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Annotation call - with Trials" status="passed" time="1.185969"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: API basic Annotation call - with Trials
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Annotation ... passed in 0.488s
+    And I Include trials ... passed in 0.698s
+    Then I get a status code of 200 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Protocol call - with Annotations And Trials(INVALID)" status="passed" time="1.045531"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: API basic Protocol call - with Annotations And Trials(INVALID)
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Protocol ... passed in 0.474s
+    And I Include annotations ... passed in 0.571s
+    Then I get a status code of 400 ... passed in 0.000s
+    And I see the Error title is "Invalid parameter" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Message : Invalid parameter
+Actual : Invalid parameter
+
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Protocol call - with Annotations(INVALID)" status="passed" time="1.023036"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: API basic Protocol call - with Annotations(INVALID)
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Protocol ... passed in 0.476s
+    And I Include annotations ... passed in 0.546s
+    Then I get a status code of 400 ... passed in 0.000s
+    And I see the Error title is "Invalid parameter" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Message : Invalid parameter
+Actual : Invalid parameter
+
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Annotation call - BOTH  Protocols and Trials(INVALID)" status="passed" time="1.570714"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: API basic Annotation call - BOTH  Protocols and Trials(INVALID)
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Annotation ... passed in 1.024s
+    And I Include protocols and trials ... passed in 0.546s
+    Then I get a status code of 400 ... passed in 0.000s
+    And I see the Error title is "Invalid parameter" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Message : Invalid parameter
+Actual : Invalid parameter
+
+]]>
+</system-out></testcase><testcase classname="env_staging.TR_API_Basic_Calls_with_Include.Verify the basic api call" name="API basic Annotation call - with Protocols(INVALID)" status="passed" time="1.039256"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: API basic Annotation call - with Protocols(INVALID)
+    Given I am on staging environment ... passed in 0.000s
+    When I request to see all Annotation ... passed in 0.478s
+    And I Include protocols ... passed in 0.561s
+    Then I get a status code of 400 ... passed in 0.000s
+    And I see the Error title is "Invalid parameter" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Message : Invalid parameter
+Actual : Invalid parameter
+
+]]>
+</system-out></testcase></testsuite>
